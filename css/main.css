@@ -196,9 +196,30 @@ figcaption {
         5.3 - Alignments
 --------------------------------------------------------------*/
 
+/*
+300 Light
+400 Regular
+600 Semi-Bold
+700 Bold
+800 Extra-Bold
+*/
+
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
 -------------------------------------------------------------- */
+.hollow, h2 {
+	color: #f63736;
+}
+
+body {
+	font-size: 16pt;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+bold {
+	color: #0113fe;
+}
 
 /* ----- 1.1 - Headings ----- */
 .hero p, .hero blockquote {
@@ -207,13 +228,75 @@ figcaption {
 
 blockquote {
 	margin-right: 0;
+	font-size: 1.5rem;
+}
+
+h2 {
+	font-size: 1.31rem;
+}
+
+blockquote span, h2, .btn {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+bold {
+	font: italic 600 3.5rem 'Source Sans Pro';
+}
+
+.hero bold {
+	font-size: 10.9rem;
 }
 
 
 
 /* ----- 1.2 - Body Copy ----- */
+.hero {
+	text-align: right;
+}
+
+header p, #products span {
+	font-size: 0.9rem;
+	font-weight: 300;
+}
+
+#about {
+	font-weight: 600;
+}
 
 /* ----- 1.3 - Buttons ----- */
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color: initial;
+}
+
+.btn {
+	font-size: 0.875rem;
+	display: inline-block;
+	padding: 4px 11px;
+}
+
+.solid, .hollow:hover {
+	background-color: #f63736;
+	color: #fff7f2;
+}
+
+.solid:hover {
+	background-color: #0113fe;
+}
+
+.hollow {
+	background-color: #fff7f2; 
+	border: 2px solid #f63736;
+}
+
+blockquote span {
+	font-size: 1.125rem;
+}
+
 /* ----- 1.4 - Forms ----- */
 /* ----- 1.5 - Lists ----- */
 /* ----- 1.6 - Tables ----- */

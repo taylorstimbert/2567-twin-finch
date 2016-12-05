@@ -1,6 +1,245 @@
 @charset "UTF-8";
 /* CSS Document */
 
+
+/*if you want to apply a bacground color to a column, you need to place a div inside of the column and apply the background color to that child element*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Typography
+        1.1 - Headings
+        1.2 - Body Copy
+        1.3 - Buttons
+        1.4 - Forms
+        1.5 - Lists
+        1.6 - Tables
+2.0 - Navigation Menus
+        2.1 - Main Menu
+        2.2 - Sub Menu
+        2.3 - Footer Menu
+3.0 - Content
+        3.1 - Site Structure (Site Header, Advertisement, Site Footer)
+4.0 - Media
+5.0 - Utility
+        5.1 - Colors
+        5.2 - Text Sizes
+        5.3 - Alignments
+--------------------------------------------------------------*/
+
+/*
+300 Light
+400 Regular
+600 Semi-Bold
+700 Bold
+800 Extra-Bold
+*/
+
+/*--------------------------------------------------------------
+1.0 - TYPOGRAPHY
+-------------------------------------------------------------- */
+.btn, .btn a, #products span, #products p:last-of-type, .sprite li {
+	display: inline-block;
+}
+
+
+.hollow a {
+	border-width: 2px;
+	border-style: solid;
+}
+
+.hollow, #products h2, #process a, .hero bold {
+	color: #f63736;
+}
+
+#about h2 {
+	color: #fff7f2; /*consolidate later*/
+}
+
+body {
+	font-size: 14pt;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+bold {
+	color: #202c90;
+}
+
+h1 {
+	margin: 0;
+}
+
+/* ----- 1.1 - Headings ----- */
+.hero p, .hero blockquote {
+	text-align: right;
+}
+
+blockquote {
+	margin-right: 0;
+	font-size: 1.5rem;
+}
+
+h2 {
+	font-size: 1.31rem;
+	margin: 5px 0;
+}
+
+blockquote span, h2, .btn {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+bold {
+	font: italic 600 3.5rem 'Source Sans Pro';
+}
+
+.hero bold {
+	font-size: 10.9rem;
+}
+
+
+/* ----- 1.2 - Body Copy ----- */
+.hero {
+	text-align: right;
+}
+
+#products header p, #products span {
+	font-size: 0.9rem;
+	font-weight: 300;
+}
+
+#products header {
+	line-height: 0.75;
+}
+
+#products span {
+	margin-left: 10px;
+}
+
+#about {
+	font-weight: 600;
+}
+
+
+#about, .solid a, .hollow a:hover {
+	color: #fff7f2; 
+}
+
+
+/* ----- 1.3 - Buttons ----- */
+a {
+	text-decoration: none;
+}
+
+.btn a {
+	font-size: 0.875rem;
+	padding: 4px 11px;
+}
+
+.solid a, .hollow a:hover {
+	background-color: #f63736;
+}
+
+.solid a:hover {
+	background-color: #202c90;
+}
+
+.hollow a {
+	background-color: #fff7f2; 
+	border-color: #f63736;
+}
+
+blockquote span {
+	font-size: 1.125rem;
+}
+
+#history .btn a:last-of-type {
+	margin-left: 50px;
+}
+
+
+/* ----- 1.4 - Forms ----- */
+label {
+	display: none;
+}
+
+input, textarea {
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 5px;
+}
+
+input {
+	height: 40px;
+}
+
+form {
+	text-align: right;
+}
+
+form .btn a {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+/* ----- 1.5 - Lists ----- */
+/* ----- 1.6 - Tables ----- */
+
+
+/*--------------------------------------------------------------
+2.0 - NAVIGATION MENUS
+-------------------------------------------------------------- */
+
+/* ----- 2.1 - Main Menu ----- */
+/* start navigation code from elizabeth */
+	nav {
+	  position: relative;
+	}
+	
+	.dropdown-toggle {
+	  padding: .5em 1em;
+	}
+	
+	ul.dropdown {
+	  display: none;
+	  position: absolute;
+	  top: 100%;
+	  margin-top: .5em;
+	  min-width: 12em;
+	  padding: 0;
+	}
+	
+	ul {
+	    list-style-type: none;      
+	}
+	
+	ul.dropdown a {
+		text-decoration: none;
+		padding: .5em 1em;
+		display: block;
+	}
+/* end navigation code from elizabeth */
+
+
+/* ----- 2.2 - Sub Menu ----- */
+/* ----- 2.3 - Footer Menu ----- */
+
+
+/*--------------------------------------------------------------
+3.0 - CONTENT
+-------------------------------------------------------------- */
+
+/* ----- 3.1 - Site Structure (Header, Advertisement, Site Footer) ----- */
+/*.flex {
+	display: -webkit-flex;
+	display: -o-flex;
+	display: -ms-flex;
+	display: -moz-flex;
+	display: flex;
+	overflow: hidden;
+}*/
+
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -155,212 +394,73 @@ figcaption {
 	width: 58.33%;
 }
 
-
-/*background color and height are just so we can see it in our browser*/
-
-.coral, .beige {
-	height: 50px;
-}
-
-.coral {
-	background-color: coral;
-}
-
-.beige {
-	background-color: papayawhip;
-}
-
-/*if you want to apply a bacground color to a column, you need to place a div inside of the column and apply the background color to that child element*/
-
-
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-1.0 - Typography
-        1.1 - Headings
-        1.2 - Body Copy
-        1.3 - Buttons
-        1.4 - Forms
-        1.5 - Lists
-        1.6 - Tables
-2.0 - Navigation Menus
-        2.1 - Main Menu
-        2.2 - Sub Menu
-        2.3 - Footer Menu
-3.0 - Content
-        3.1 - Site Structure (Site Header, Advertisement, Site Footer)
-4.0 - Media
-5.0 - Utility
-        5.1 - Colors
-        5.2 - Text Sizes
-        5.3 - Alignments
---------------------------------------------------------------*/
-
-/*
-300 Light
-400 Regular
-600 Semi-Bold
-700 Bold
-800 Extra-Bold
-*/
-
-/*--------------------------------------------------------------
-1.0 - TYPOGRAPHY
--------------------------------------------------------------- */
-.hollow, h2 {
-	color: #f63736;
-}
-
-body {
-	font-size: 16pt;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
-}
-
-bold {
-	color: #0113fe;
-}
-
-/* ----- 1.1 - Headings ----- */
-.hero p, .hero blockquote {
-	text-align: right;
-}
-
-blockquote {
-	margin-right: 0;
-	font-size: 1.5rem;
-}
-
-h2 {
-	font-size: 1.31rem;
-}
-
-blockquote span, h2, .btn {
-	text-transform: uppercase;
-	font-weight: 700;
-}
-
-bold {
-	font: italic 600 3.5rem 'Source Sans Pro';
-}
-
-.hero bold {
-	font-size: 10.9rem;
-}
-
-
-
-/* ----- 1.2 - Body Copy ----- */
-.hero {
-	text-align: right;
-}
-
-header p, #products span {
-	font-size: 0.9rem;
-	font-weight: 300;
-}
-
-#about {
-	font-weight: 600;
-}
-
-/* ----- 1.3 - Buttons ----- */
-a {
-	text-decoration: none;
-}
-
-a:visited {
-	color: initial;
-}
-
-.btn {
-	font-size: 0.875rem;
-	display: inline-block;
-	padding: 4px 11px;
-}
-
-.solid, .hollow:hover {
-	background-color: #f63736;
-	color: #fff7f2;
-}
-
-.solid:hover {
-	background-color: #0113fe;
-}
-
-.hollow {
-	background-color: #fff7f2; 
-	border: 2px solid #f63736;
-}
-
-blockquote span {
-	font-size: 1.125rem;
-}
-
-/* ----- 1.4 - Forms ----- */
-/* ----- 1.5 - Lists ----- */
-/* ----- 1.6 - Tables ----- */
-
-
-/*--------------------------------------------------------------
-2.0 - NAVIGATION MENUS
--------------------------------------------------------------- */
-
-/* ----- 2.1 - Main Menu ----- */
-
-/* ----- 2.2 - Sub Menu ----- */
-/* ----- 2.3 - Footer Menu ----- */
-
-
-/*--------------------------------------------------------------
-3.0 - CONTENT
--------------------------------------------------------------- */
-
-/* ----- 3.1 - Site Structure (Header, Advertisement, Site Footer) ----- */
 .hero {
 	padding: 50px 0;
 }
 
+#products .col-2-3 {
+	padding-left: 30px;
+}
+
+#products .f-right, #products p {
+	margin-bottom: 0;
+}
+
+.sprite {
+	float: none;
+	margin: 0 auto;
+}
 
 /*--------------------------------------------------------------
 4.0 - MEDIA
 -------------------------------------------------------------- */
 #map {
-	height: 200px;
+	height: 400px;
 }
 
-/* start navigation code from elizabeth */
-	nav {
-	  position: relative;
-	}
-	
-	.dropdown-toggle {
-	  padding: .5em 1em;
-	}
-	
-	ul.dropdown {
-	  display: none;
-	  position: absolute;
-	  top: 100%;
-	  margin-top: .5em;
-	  min-width: 12em;
-	  padding: 0;
-	}
-	
-	ul {
-	    list-style-type: none;      
-	}
-	
-	ul.dropdown a {
-		text-decoration: none;
-		padding: .5em 1em;
-		display: block;
-	}
-/* end navigation code from elizabeth */
+#about {
+	background-image: url(../img/process.jpg);
+	padding: 50px;
+}
+
+.sprite a {
+	background-position: 0 0;
+	height: 25px;
+	width: 25px;
+	display: block;
+}
+
+.sprite li:first-child a {
+	background: url(../img/icon-google.png) no-repeat;
+}
+
+.sprite li:nth-child(2) a {
+	background: url(../img/icon-facebook.png) no-repeat;
+}
+
+.sprite li:nth-child(3) a {
+	background: url(../img/icon-twitter.png) no-repeat;
+}
+
+.sprite li a:hover{
+	background-position: 0 -25px;
+}
+
 
 /*--------------------------------------------------------------
 5.0 - UTILITY
 -------------------------------------------------------------- */
+.border>div {
+	padding: 30px 40px 40px 40px;
+}
+
+.border {
+	padding: 20px;
+}
+
+.border>div {
+	border: 2px solid #1A1A1A;
+}
 
 /* ----- 5.1 - Colors ----- */
 .bg-lite {
@@ -368,7 +468,7 @@ blockquote span {
 }
 
 .bg-blue {
-	background-color: #0113FE;
+	background-color: #202c90;
 	color: white;
 }
 
@@ -413,7 +513,7 @@ blockquote span {
 		padding-right: 0;
 	}
 	
-	.col-1-7, .col-1-11, #evening-oak .row>.col-1-2, #newsletter>.col-1-3, #products section.col-1-2 div.col-2-3:last-child, #newsletter>.col-2-3, .hero blockquote.col-3-4 {
+	.col-1-7, .col-1-11, #evening-oak .row>.col-1-2, #newsletter>.col-1-3, #products section.col-1-2 div.col-2-3:last-child, #newsletter>.col-2-3, .hero blockquote.col-3-4, #about section {
 		width: 100%;
 	}
 	
@@ -443,6 +543,18 @@ blockquote span {
 	
 	#products section.col-1-2 div.col-2-3:last-child, #newsletter>.col-2-3 {
 		float: left;
+	}
+	
+	#products .row {
+		padding: 5px 0;
+	}
+
+	#about {
+		padding: 20px;
+	}
+	
+	.border {
+		padding: 10px;
 	}
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

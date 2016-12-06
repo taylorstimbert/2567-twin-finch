@@ -406,9 +406,8 @@ figcaption {
 	margin-bottom: 0;
 }
 
-.sprite {
-	float: none;
-	margin: 0 auto;
+footer {
+	padding-top: 40px;
 }
 
 /*--------------------------------------------------------------
@@ -428,6 +427,12 @@ figcaption {
 	height: 25px;
 	width: 25px;
 	display: block;
+}
+
+.sprite {
+	float: none;
+	margin: 0 auto;
+	
 }
 
 .sprite li:first-child a {

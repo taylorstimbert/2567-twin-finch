@@ -2,9 +2,6 @@
 /* CSS Document */
 
 
-/*if you want to apply a bacground color to a column, you need to place a div inside of the column and apply the background color to that child element*/
-
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -28,37 +25,44 @@
         5.3 - Alignments
 --------------------------------------------------------------*/
 
-/*
-300 Light
-400 Regular
-600 Semi-Bold
-700 Bold
-800 Extra-Bold
-*/
 
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
 -------------------------------------------------------------- */
-.btn, .btn a, #products span, #products p:last-of-type, .sprite li {
-	display: inline-block;
-}
-.hollow, #products h2, #process a, #hero bold {
-	color: #f63736;
-}
-#about h2 {
-	color: #fff7f2; /*consolidate later*/
-}
 body {
 	font-size: 14pt;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 }
-bold {
-	color: #0113fe;
-	font: italic 600 3.5rem 'Source Sans Pro';
+#products header p, #products span, footer .f-right {
+	font-weight: 300;
 }
-h1 {
-	margin: 0;
+form, #menu li, #hero, footer p {
+	text-align: right;
+}
+a, .hollow, #products h2, #process a, #hero b {
+	color: #f63736;
+}
+.solid a, .hollow a:hover, .diagonal {
+	background-color: #f63736;
+}
+#about, .solid a, .hollow a:hover, footer p, #process a:hover {
+	color: #fff7f2;
+}
+.hollow a, ul.dropdown, .bg-lite {
+	background-color: #fff7f2;
+}
+.solid a:hover, .bg-blue {
+	background-color: #0113fe;
+}
+blockquote a:hover, #menu a, b {
+	color: #0113fe;
+}
+.btn, .btn a, #products span, #products p:last-of-type, .sprite li {
+	display: inline-block;
+}
+blockquote span, h2, .btn, #menu a {
+	text-transform: uppercase;
 }
 /* ----- 1.1 - Headings ----- */
 blockquote {
@@ -70,21 +74,19 @@ h2 {
 	margin: 5px 0;
 }
 blockquote span, h2, .btn {
-	text-transform: uppercase;
 	font-weight: 700;
 }
-#hero bold {
-	font-size: 10.9rem;
+#hero b {
+	font-size: 8rem;
 	letter-spacing: 2.5rem;
 	margin-right: -2.5rem;
 }
 /* ----- 1.2 - Body Copy ----- */
-#hero {
-	text-align: right;
+b {
+	font: italic 600 3.5rem 'Source Sans Pro';
 }
 #products header p, #products span {
 	font-size: 0.9rem;
-	font-weight: 300;
 }
 #products header {
 	line-height: 0.75;
@@ -95,30 +97,21 @@ blockquote span, h2, .btn {
 #about {
 	font-weight: 600;
 }
-#about, .solid a, .hollow a:hover {
-	color: #fff7f2;
+footer .f-right {
+	margin-top: -50px;
 }
-footer p {
-	margin: 0;
-	text-align: right;
+#hero .col-3-4.f-right {
+	z-index: 50000;
 }
 /* ----- 1.3 - Buttons ----- */
 a {
 	text-decoration: none;
-	color: #f63736;
 }
 .btn a {
 	font-size: 0.875rem;
 	padding: 4px 11px;
 }
-.solid a, .hollow a:hover {
-	background-color: #f63736;
-}
-.solid a:hover {
-	background-color: #0113fe;
-}
 .hollow a {
-	background-color: #fff7f2;
 	border-color: #f63736;
 }
 .hollow a, .border>div {
@@ -132,20 +125,15 @@ blockquote a {
 	border-bottom: 3px solid #f63736;
 }
 #process a:hover {
-	color: #fff7f2;
 	border-color: #fff7f2;
 }
 blockquote a:hover {
-	color: #0113fe;
 	border-color: #0113FE;
 }
 #history .btn a:last-of-type {
 	margin-left: 50px;
 }
 /* ----- 1.4 - Forms ----- */
-label {
-	display: none;
-}
 input, textarea {
 	width: 100%;
 	margin-bottom: 20px;
@@ -153,9 +141,6 @@ input, textarea {
 }
 input {
 	height: 40px;
-}
-form {
-	text-align: right;
 }
 form .btn a {
 	padding-left: 25px;
@@ -171,104 +156,84 @@ form .btn a {
 
 /* ----- 2.1 - Main Menu ----- */
 #nav-bar {
-	padding: 20px;
+	padding: 20px 0;
+	margin-bottom: 100px
 }
-
-.line {
-  width: 2px;
-  height: 50px;
-  background-color: #F63736;
-  -moz-transform: translateY(-20px) translateX(-10px) rotate(45deg);
-  -o-transform: translateY(-20px) translateX(-10px) rotate(45deg);
-  -ms-transform: translateY(-20px) translateX(-10px) rotate(45deg);
-  -webkit-transform: translateY(-20px) translateX(-10px) rotate(45deg);
-  transform: translateY(-20px) translateX(-10px) rotate(45deg);
-  transition-duration: 800ms;
-  position: absolute;
-  right: 35px;
-  top: 5px;
-  z-index: 1;
+#menu {
+	width: 150px;
 }
-
+.diagonal {
+	width: 2px;
+	height: 50px;
+	-moz-transform: translateY(-20px) translateX(-10px) rotate(45deg);
+	-o-transform: translateY(-20px) translateX(-10px) rotate(45deg);
+	-ms-transform: translateY(-20px) translateX(-10px) rotate(45deg);
+	-webkit-transform: translateY(-20px) translateX(-10px) rotate(45deg);
+	transform: translateY(-20px) translateX(-10px) rotate(45deg);
+	transition-duration: 800ms;
+	position: absolute;
+	right: 10%;
+	top: 35px;
+	z-index: 1;
+}
 .dropdown-toggle {
-  z-index: 2;
-  font: italic 600 17px 'Source Sans Pro', sans-serif;
-  letter-spacing: 3px;
+	z-index: 2;
+	font: italic 600 17px 'Source Sans Pro', sans-serif;
+	letter-spacing: 3px;
+	position: absolute;
+	right: 10%;
+	top: 24px;
 }
-
 nav>ul {
-	margin: 0;
 	padding: 0;
+	margin: 0 -20px 0 0;
+	position: absolute;
+	right: 10%;
+	top: 7px;
 }
-
 ul.dropdown {
-  display: none;
-  min-width: 12em;
-  background-color: #fff7f2;
-  padding: 8px;
-  z-index: 3;
-  font: 600 17px 'Source Sans Pro', sans-serif;
-  letter-spacing: 1.5px;
+	z-index: 3;
+	font: 600 17px 'Source Sans Pro', sans-serif;
+	letter-spacing: 1.5px;
+	position: absolute;
+	right: 10%;
+	top: 12px;
+	padding-top: 15px;
 }
-
 #menu li {
-  list-style-type: none;
-  text-align: right;
+	list-style-type: none;
 }
-
-ul.dropdown a {
-  display: block;
-}
-
 ul.dropdown li {
-  padding: 7px 0;
+	padding: 7px 0;
 }
-
 ul.dropdown li:first-child {
-  padding-top: 0;
-  margin-top: -2px;
+	padding-top: 0;
+	margin-top: -2px;
 }
-
 ul.dropdown li:last-child {
-  padding-bottom: 0;
-  margin-bottom: -2px;
+	padding-bottom: 0;
+	margin-bottom: -2px;
 }
-
 .rotate {
-  -moz-transform: rotate(0) scaleY(1.75);
-  -o-transform: rotate(0) scaleY(1.75);
-  -ms-transform: rotate(0) scaleY(1.75);
-  -webkit-transform: rotate(0) scaleY(1.75);
-  transform: rotate(0) scaleY(1.75);
-  top: 19px;
-  right: 2px;
-  transition-duration: 800ms;
-  z-index: 1000;
+	transform: rotate(0) scaleY(1.8) translate(35px, 10px);
+	transition-duration: 800ms;
+	z-index: 1000;
 }
-
-a {
-  text-decoration: none;
-  color: #0113FE;
-  text-transform: uppercase;
-}
-
 /* ----- 2.3 - Footer Menu ----- */
 
-
+label, ul.dropdown {
+	display: none;
+}
+ul.dropdown a, #hero-img a, .sprite a {
+	display: block;
+}
 /*--------------------------------------------------------------
 3.0 - CONTENT
 -------------------------------------------------------------- */
-
+.sprite, .wrapper {
+	margin: 0 auto;
+}
 /* ----- 3.1 - Site Structure (Header, Advertisement, Site Footer) ----- */
-/*.flex {
-	display: -webkit-flex;
-	display: -o-flex;
-	display: -ms-flex;
-	display: -moz-flex;
-	display: flex;
-	overflow: hidden;
-}*/
-
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -278,7 +243,6 @@ a {
 }
 .wrapper {
 	width: 85%;
-	margin: 0 auto;
 }
 .row:after {
 	content: "";
@@ -288,8 +252,8 @@ a {
 img {
 	max-width: 100%;
 }
-figcaption {
-	color: white;
+#contact-area {
+	padding-top: 50px;
 }
 /*targets any class that starts with col-whatever*/
 [class*='col-'] {
@@ -394,18 +358,43 @@ figcaption {
 	margin-bottom: 0;
 }
 footer {
-	padding-top: 40px;
+	padding: 40px 0;
+}
+.flex {
+	display: -webkit-flex;
+	display: -o-flex;
+	display: -ms-flex;
+	display: -moz-flex;
+	display: flex;
+	overflow: hidden;
+}
+.flex > .col-1-2 {
+	flex: 1;
+}
+.flex > .col-1-2 > .row {
+	height: 100%;
 }
 /*--------------------------------------------------------------
 4.0 - MEDIA
 -------------------------------------------------------------- */
-#hero {
-	background: url(../img/packaging-evening-oak.png) no-repeat 0 center;
+/*logos*/ h1, #footer img {
+	margin: 0;
+}
+.col-1-10 {
+	min-width: 12vh;
+}
+#hero-img {
+	background: url(../img/hero-img.png) no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
 	-o-background-size: contain;
 	background-size: contain;
-	margin-bottom: 100px
+	width: 300px;
+	height: 500px;
+}
+#hero-img:hover {
+	background: url(../img/hero-img-blue.png) no-repeat center;
+	background-size: contain;
 }
 #map {
 	height: 400px;
@@ -422,12 +411,13 @@ footer {
 	background-position: 0 0;
 	height: 25px;
 	width: 25px;
-	display: block;
 }
 .sprite {
 	float: none;
-	margin: 0 auto;
-	padding-left: 0;
+	text-align: center;
+}
+.sprite li {
+	padding: 0 5px;
 }
 .sprite li:first-child a {
 	background: url(../img/icon-google.png) no-repeat;
@@ -450,11 +440,7 @@ footer {
 	background-color: white;
 }
 /* ----- 5.1 - Colors ----- */
-.bg-lite {
-	background-color: #fff7f2;
-}
 .bg-blue {
-	background-color: #0113FE;
 	color: white;
 }
 /* ----- 5.2 - Text Sizes ----- */
@@ -469,8 +455,8 @@ footer {
 1.0 - TYPOGRAPHY
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 /* =-=-=-= 1.1 - Headings =-=-=-= */
-#evening-oak bold, #newsletter bold {
-	font-size: 1.65rem;
+#evening-oak b, #newsletter b {
+	font-size: 1.5rem;
 }
 h2 {
 	font-size: 1.25rem;
@@ -494,16 +480,13 @@ h2 {
 #newsletter div.col-1-3 {
 	margin-bottom: 10px;
 }
-#hero bold {
+#hero b {
 	font-size: 4rem;
 	letter-spacing: 1rem;
 	margin-right: 0;
 }
 /* =-=-=-= 1.2 - Body Copy =-=-=-= */
-#hero p {
-	font-size: .9rem;
-}
-#about, #newsletter {
+#hero p, #about, #newsletter, #products div.col-2-3 {
 	font-size: .9rem;
 }
 #about {
@@ -511,9 +494,6 @@ h2 {
 }
 #about .btn {
 	margin-bottom: 20px;
-}
-#products div.col-2-3 {
-	font-size: .9rem;
 }
 #products span {
 	margin-left: 3px;
@@ -533,11 +513,9 @@ footer {
 }
 /* =-=-=-= 1.4 - Forms =-=-=-= */
 input {
-	margin-bottom: 0;
+	margin-bottom: 10px;
 	padding: 5px;
 	height: 27px;
-	width: 66.5%;
-	float: left;
 }
 #newsletter input, #newsletter p {
 	display: inline-block;
@@ -548,8 +526,9 @@ input {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 2.0 - NAVIGATION MENUS
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-
-
+#nav-bar {
+	margin-bottom: 50px;
+}
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 3.0 - CONTENT
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
@@ -560,17 +539,13 @@ input {
 .col-1-4, #evening-oak .col-1-3, #evening-oak .col-2-3, #products section.col-1-2 header, #products section.col-1-2 img {
 	width: 50%;
 }
-
-#evening-oak .row>.col-1-2, #newsletter>.col-1-3, #products section.col-1-2 div.col-2-3:last-child, #newsletter>.col-2-3, blockquote.col-3-4, #about section {
+#evening-oak .row>.col-1-2, #newsletter>.col-1-3, #products section.col-1-2 div.col-2-3:last-child, #newsletter>.col-2-3, blockquote.col-3-4, #about section, #newsletter .col-1-3, #newsletter .col-2-3, #location, #contact {
 	width: 100%;
 }
 .col-1-6, .col-1-9 {
 	width: 33.33%;
 }
-.col-1-10 {
-	width: 20%;
-}
-.col-1-12 {
+.col-1-10, .col-1-12 {
 	width: 20%;
 }
 #hero div.col-7-12 {
@@ -582,43 +557,42 @@ input {
 #products section.col-1-2 div.col-2-3:last-child, #newsletter>.col-2-3 {
 	float: left;
 }
-#products section .row {
-	padding: 5px;
-}
 #about {
 	padding: 20px;
 }
-.border {
-	padding: 6px;
-}
-#newsletter .col-1-3, #newsletter .col-2-3, #location, #contact {
-	width: 100%;
-}
-#newsletter .col-1-3, #newsletter .col-2-3 {
+#newsletter .col-1-3, #newsletter .col-2-3, #evening-oak>div, #map {
 	padding: 0;
 }
-#products div.col-2-3, #products header.col-2-3 {
+.border, #products div.col-2-3, #products header.col-2-3 {
 	padding: 6px;
 }
-#evening-oak img {
+#products section .row, #evening-oak img {
 	padding-right: 5px;
 }
 footer {
 	padding: 20px 0;
 }
 .border div {
-	padding: 15px;
+	padding: 10px;
+}
+#hero .col-3-4 {
+	margin-top: 50px;
 }
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 4.0 - MEDIA
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-ul.sprite {
+#hero-img {
+	margin-top: -70px;
+}
+
+.sprite {
 	width: 33%;
-	padding-top: 10px;
-	padding-left: 0;
+	padding: 10px 0 0 0;
+}
+.sprite li {
+	padding: 0 3px;
 }
 #map {
 	height: 250px;
-	padding: 0;
 }
 }

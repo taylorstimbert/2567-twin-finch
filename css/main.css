@@ -37,7 +37,7 @@ body {
 .thin, footer .f-right {
 	font-weight: 300;
 }
-form, #menu li, #hero, footer p {
+#menu li, footer p, #contact form{
 	text-align: right;
 }
 a, .hollow, #products h2, #process a, #hero b {
@@ -65,10 +65,6 @@ blockquote a, h2, .btn, #menu a {
 	text-transform: uppercase;
 }
 /* ----- 1.1 - Headings ----- */
-blockquote {
-	margin-right: 0;
-	font-size: 1.5rem;
-}
 h2 {
 	font-size: 1.31rem;
 	margin: 5px 0;
@@ -79,20 +75,30 @@ h2 {
 blockquote a, h2, .btn {
 	font-weight: 700;
 }
-#hero b {
-	font-size: 8rem;
-	letter-spacing: 2.5rem;
-	margin-right: -2.5rem;
-}
 /* ----- 1.2 - Body Copy ----- */
+blockquote.col-3-4 {
+	margin: 0 auto 100px auto;
+	padding: 0;
+	font-size: 1.5rem;
+}
 b {
 	font: italic 600 3.5rem 'Source Sans Pro';
 }
+#hero div.col-3-4 {
+	text-align: center;
+	margin: 0 auto;
+}
+#hero b {
+	font-size: 10rem;
+	letter-spacing: 2.5rem;
+	margin-right: -2.5rem;
+}
 .thin {
 	font-size: 0.9rem;
-}
-#products section .col-2-3:last-child .thin {
 	margin-left: 10px;
+}
+header .thin {
+	margin-left: 0;
 }
 #about {
 	font-weight: 600;
@@ -100,16 +106,14 @@ b {
 footer .f-right {
 	margin-top: -50px;
 }
-#hero .col-3-4.f-right {
-	z-index: 50000;
-}
+
 /* ----- 1.3 - Buttons ----- */
 a {
 	text-decoration: none;
 }
 .btn a {
 	font-size: 0.875rem;
-	padding: 10px 11px;
+	padding: 8px 11px;
 }
 #newsletter p.btn {
 	margin: 0;
@@ -141,9 +145,13 @@ input, textarea {
 	width: 100%;
 	padding: 5px;
 }
-form .btn a {
-	padding-left: 25px;
-	padding-right: 25px;
+
+#newsletter input {
+	width: 80%;
+}
+
+input {
+	height: 36px;
 }
 /* ----- 1.5 - Lists ----- */
 /* ----- 1.6 - Tables ----- */
@@ -156,7 +164,6 @@ form .btn a {
 /* ----- 2.1 - Main Menu ----- */
 #nav-bar {
 	padding: 20px 0;
-	margin-bottom: 100px
 }
 #menu {
 	width: 150px;
@@ -223,12 +230,16 @@ ul.dropdown li:last-child {
 label, ul.dropdown {
 	display: none;
 }
-ul.dropdown a, #hero-img a, .sprite a {
+ul.dropdown a, .sprite a {
 	display: block;
 }
 /*--------------------------------------------------------------
 3.0 - CONTENT
 -------------------------------------------------------------- */
+blockquote.col-3-4, #hero div.col-3-4 {
+	float: none;
+}
+
 .sprite, .wrapper {
 	margin: 0 auto;
 }
@@ -294,20 +305,8 @@ img {
 footer {
 	padding: 40px 0;
 }
-.flex {
-	display: -webkit-flex;
-	display: -o-flex;
-	display: -ms-flex;
-	display: -moz-flex;
-	display: flex;
-	overflow: hidden;
-}
-.flex > .col-1-2 {
-	flex: 1;
-}
-.flex > .col-1-2 > .row {
-	height: 100%;
-}
+
+
 /*--------------------------------------------------------------
 4.0 - MEDIA
 -------------------------------------------------------------- */
@@ -316,19 +315,6 @@ footer {
 }
 .col-1-10 {
 	min-width: 12vh;
-}
-#hero-img {
-	background: url(../img/hero-img.png) no-repeat center;
-	-webkit-background-size: contain;
-	-moz-background-size: contain;
-	-o-background-size: contain;
-	background-size: contain;
-	width: 300px;
-	height: 500px;
-}
-#hero-img:hover {
-	background: url(../img/hero-img-blue.png) no-repeat center;
-	background-size: contain;
 }
 #map {
 	height: 400px;
@@ -381,8 +367,30 @@ footer {
 /* ----- 5.3 - Alignments ----- */
 .f-right {
 	float: right;
-	padding-right: 0;
 }
+
+
+
+
+
+@media (min-width: 480px) {
+.flex {
+	display: -webkit-flex;
+	display: -o-flex;
+	display: -ms-flex;
+	display: -moz-flex;
+	display: flex;
+	overflow: hidden;
+}
+.flex > .col-1-2 {
+	flex: 1;
+}
+.flex > .col-1-2 > .row {
+	height: 100%;
+}
+}
+
+
 
 @media (max-width: 480px) {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -399,7 +407,7 @@ h2 {
 	margin-top: 30px;
 }
 #products h2 {
-	font-size: 0.8rem;
+	font-size: 1.5rem;
 	margin-bottom: 0;
 }
 #newsletter p {
@@ -416,7 +424,16 @@ h2 {
 	letter-spacing: 1rem;
 	margin-right: 0;
 }
+header .thin {
+	margin-top: 0;
+}
+#products header {
+	margin-bottom: 0;
+}
 /* =-=-=-= 1.2 - Body Copy =-=-=-= */
+blockquote.col-3-4 {
+	margin-bottom: 80px;
+}
 #hero p, #about, #newsletter, #products div.col-2-3 {
 	font-size: .9rem;
 }
@@ -426,27 +443,28 @@ h2 {
 #about .btn {
 	margin-bottom: 20px;
 }
-#products section .col-2-3>p:last-of-type {
-	margin-left: 3px;
-	font-size: .75rem;
+.thin {
+	font-size: .8rem;
 	font-weight: 400;
 }
 footer {
 	font-size: 0.8rem
 }
+#products section .row>div.col-2-3 p:first-child {
+	margin: 10px 0;
+}
 /* =-=-=-= 1.3 - Buttons =-=-=-= */
-#products .btn a {
-	font-size: .65rem;
-	padding: 6px;
-}
-#newsletter .btn {
-	margin-bottom: 10px;
-}
+
 /* =-=-=-= 1.4 - Forms =-=-=-= */
-input {
+input, #newsletter .btn {
 	margin-bottom: 10px;
+}
+input {
 	padding: 5px;
-	height: 27px;
+	height: 35px;
+}
+#newsletter input {
+	width: 75%;
 }
 #newsletter input, #newsletter p {
 	display: inline-block;
@@ -457,27 +475,27 @@ input {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 2.0 - NAVIGATION MENUS
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-#nav-bar {
-	margin-bottom: 50px;
-}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 3.0 - CONTENT
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* =-=-=-= 3.1 - Site Structure =-=-=-= */
 .wrapper {
 	width: 96%;
 }
-/* =-=-=-= 3.1 - Column Widths =-=-=-= */
-#evening-oak .col-1-3, #evening-oak .col-2-3, #products section.col-1-2 header, #products section.col-1-2 img {
+
+#evening-oak .col-1-3, #evening-oak .col-2-3 {
 	width: 50%;
 }
-#evening-oak .row>.col-1-2, #newsletter>.col-1-3, #products section.col-1-2 div.col-2-3:last-child, #newsletter>.col-2-3, blockquote.col-3-4, #about section, #newsletter .col-1-3, #newsletter .col-2-3, #location, #contact {
+#evening-oak .row>.col-1-2, #newsletter>.col-1-3, #newsletter>.col-2-3, blockquote.col-3-4, #about section, #newsletter .col-1-3, #newsletter .col-2-3, #location, #contact {
 	width: 100%;
+}
+
+#products section.col-1-2 div.col-2-3:last-child, #products section.col-1-2 header {
+	width: 66%;
 }
 .col-1-10 {
 	width: 20%;
-}
-#products section.col-1-2 header {
-	float: right;
 }
 #products section.col-1-2 div.col-2-3:last-child, #newsletter>.col-2-3 {
 	float: left;
@@ -485,30 +503,32 @@ input {
 #about {
 	padding: 20px;
 }
-#newsletter .col-1-3, #newsletter .col-2-3, #evening-oak>div, #map {
+#newsletter .col-1-3, #newsletter .col-2-3, #map {
 	padding: 0;
 }
 .border, #products div.col-2-3, #products header.col-2-3 {
 	padding: 6px;
 }
-#products section .row, #evening-oak img {
-	padding-right: 5px;
-}
 footer {
 	padding: 20px 0;
 }
-.border div {
+.border>div {
 	padding: 10px;
 }
-#hero .col-3-4 {
-	margin-top: 50px;
+
+#products section.col-1-2 {
+	width: 100%;
 }
+
+#products section.col-1-2 img {
+	width: 33%;
+	padding: 10px 10px 0 5px;
+}
+
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 4.0 - MEDIA
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-#hero-img {
-	margin-top: -70px;
-}
 
 .sprite {
 	width: 33%;
@@ -518,6 +538,6 @@ footer {
 	padding: 0 3px;
 }
 #map {
-	height: 250px;
+	height: 200px;
 }
 }

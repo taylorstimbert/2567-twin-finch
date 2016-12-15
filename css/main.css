@@ -33,36 +33,40 @@ body {
 	font-size: 14pt;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
+	color: #1a1a1a;
 }
 .thin, footer .f-right {
 	font-weight: 300;
 }
-#menu li, footer p, #contact form{
+#menu li, footer p, #contact form {
 	text-align: right;
 }
-a, .hollow, #products h2, #process a, #hero b {
-	color: #f63736;
+a, .hollow, #process a, b, #menu .dropdown a:hover {
+	color: #ea3f33;
 }
 .solid a, .hollow a:hover, .diagonal {
-	background-color: #f63736;
+	background-color: #ea3f33;
 }
 #about, .solid a, .hollow a:hover, footer p, #process a:hover {
-	color: #fff7f2;
+	color: #fdfdfd;
 }
-.hollow a, ul.dropdown, .bg-lite {
-	background-color: #fff7f2;
+.hollow a, ul.dropdown, .bg-lite, .border>div {
+	background-color: #fdfdfd;
 }
-.solid a:hover, .bg-blue {
-	background-color: #0113fe;
+blockquote a:hover {
+	color: #103291;
 }
-blockquote a:hover, #menu a, b {
-	color: #0113fe;
+#menu a {
+	color: #0a39bf;
 }
 .btn, .btn a, .thin, .sprite li {
 	display: inline-block;
 }
 blockquote a, h2, .btn, #menu a {
 	text-transform: uppercase;
+}
+.sprite, #hero div.col-3-4 {
+	text-align: center;
 }
 /* ----- 1.1 - Headings ----- */
 h2 {
@@ -77,19 +81,15 @@ blockquote a, h2, .btn {
 }
 /* ----- 1.2 - Body Copy ----- */
 blockquote.col-3-4 {
-	margin: 0 auto 100px auto;
-	padding: 0;
+	margin: 0 auto 60px auto;
 	font-size: 1.5rem;
 }
 b {
 	font: italic 600 3.5rem 'Source Sans Pro';
 }
-#hero div.col-3-4 {
-	text-align: center;
-	margin: 0 auto;
-}
+
 #hero b {
-	font-size: 10rem;
+	font-size: 9rem;
 	letter-spacing: 2.5rem;
 	margin-right: -2.5rem;
 }
@@ -104,7 +104,7 @@ header .thin {
 	font-weight: 600;
 }
 footer .f-right {
-	margin-top: -50px;
+	margin-top: -60px;
 }
 
 /* ----- 1.3 - Buttons ----- */
@@ -115,11 +115,13 @@ a {
 	font-size: 0.875rem;
 	padding: 8px 11px;
 }
-#newsletter p.btn {
-	margin: 0;
+#contact .btn a {
+	padding-left: 18px;
+	padding-right: 18px;
 }
+
 .hollow a {
-	border-color: #f63736;
+	border-color: #ea3f33;
 }
 .hollow a, .border>div {
 	border-width: 2px;
@@ -129,13 +131,13 @@ blockquote a {
 	font-size: 1.125rem;
 }
 #process a, blockquote a {
-	border-bottom: 3px solid #f63736;
+	border-bottom: 3px solid #ea3f33;
 }
 #process a:hover {
-	border-color: #fff7f2;
+	border-color: #fdfdfd;
 }
 blockquote a:hover {
-	border-color: #0113FE;
+	border-color: #103291;
 }
 #history .btn a:last-of-type {
 	margin-left: 50px;
@@ -154,6 +156,7 @@ input {
 	height: 36px;
 }
 /* ----- 1.5 - Lists ----- */
+
 /* ----- 1.6 - Tables ----- */
 
 
@@ -168,6 +171,10 @@ input {
 #menu {
 	width: 150px;
 }
+.diagonal, .dropdown-toggle, nav>ul, ul.dropdown {
+	position: absolute;
+	right: 10%;
+}
 .diagonal {
 	width: 2px;
 	height: 50px;
@@ -177,8 +184,6 @@ input {
 	-webkit-transform: translateY(-20px) translateX(-10px) rotate(45deg);
 	transform: translateY(-20px) translateX(-10px) rotate(45deg);
 	transition-duration: 800ms;
-	position: absolute;
-	right: 10%;
 	top: 35px;
 	z-index: 1;
 }
@@ -186,23 +191,16 @@ input {
 	z-index: 2;
 	font: italic 600 17px 'Source Sans Pro', sans-serif;
 	letter-spacing: 3px;
-	position: absolute;
-	right: 10%;
 	top: 24px;
 }
 nav>ul {
-	padding: 0;
 	margin: 0 -20px 0 0;
-	position: absolute;
-	right: 10%;
 	top: 7px;
 }
 ul.dropdown {
 	z-index: 3;
 	font: 600 17px 'Source Sans Pro', sans-serif;
 	letter-spacing: 1.5px;
-	position: absolute;
-	right: 10%;
 	top: 12px;
 	padding-top: 15px;
 }
@@ -225,7 +223,6 @@ ul.dropdown li:last-child {
 	transition-duration: 800ms;
 	z-index: 1000;
 }
-/* ----- 2.3 - Footer Menu ----- */
 
 label, ul.dropdown {
 	display: none;
@@ -236,11 +233,8 @@ ul.dropdown a, .sprite a {
 /*--------------------------------------------------------------
 3.0 - CONTENT
 -------------------------------------------------------------- */
-blockquote.col-3-4, #hero div.col-3-4 {
-	float: none;
-}
 
-.sprite, .wrapper {
+.sprite, .wrapper, #hero div.col-3-4 {
 	margin: 0 auto;
 }
 
@@ -266,13 +260,12 @@ blockquote.col-3-4, #hero div.col-3-4 {
 img {
 	max-width: 100%;
 }
-#contact-area {
-	padding-top: 50px;
+#contact-area, #products {
+	padding: 60px 0 40px 0;
 }
-/*targets any class that starts with col-whatever*/
 [class*='col-'] {
 	float: left;
-	padding-right: 20px; /*use px because gutter should always be the same size*/
+	padding-right: 20px;
 	margin-bottom: 20px;
 }
 [class*='col-']:last-of-type {
@@ -299,20 +292,25 @@ img {
 #products .col-2-3 {
 	padding-left: 30px;
 }
-#products .f-right, #products p {
-	margin-bottom: 0;
-}
 footer {
-	padding: 40px 0;
+	padding: 40px 0 10px 0;
 }
-
-
+nav>ul, footer ul, blockquote.col-3-4 {
+	padding: 0;
+}
+#newsletter p.btn, h1, #footer img {
+	margin: 0;
+}
+blockquote.col-3-4, #hero div.col-3-4, .sprite.col-1-3 {
+	float: none;
+}
+#products .f-right, #products p, .col-1-3.sprite {
+	margin-bottom: 0;
+} /*I these fellas down here, because they need to over-ride the float and margin applied by [class*='col-']*/
 /*--------------------------------------------------------------
 4.0 - MEDIA
 -------------------------------------------------------------- */
-/*logos*/ h1, #footer img {
-	margin: 0;
-}
+
 .col-1-10 {
 	min-width: 12vh;
 }
@@ -325,16 +323,15 @@ footer {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	padding: 50px;
+	padding: 60px 0;
+}
+footer div.col-1-10 {
+	margin-top: -15px;
 }
 .sprite a {
 	background-position: 0 0;
 	height: 25px;
 	width: 25px;
-}
-.sprite {
-	float: none;
-	text-align: center;
 }
 .sprite li {
 	padding: 0 5px;
@@ -357,18 +354,16 @@ footer {
 .border>div {
 	padding: 30px 40px 40px 40px;
 	border-color: #1a1a1a;
-	background-color: white;
 }
 /* ----- 5.1 - Colors ----- */
-.bg-blue {
-	color: white;
+.bg-blue, .solid a:hover {
+	background-color: #103291;
 }
 /* ----- 5.2 - Text Sizes ----- */
 /* ----- 5.3 - Alignments ----- */
 .f-right {
 	float: right;
 }
-
 
 
 
@@ -397,7 +392,7 @@ footer {
 1.0 - TYPOGRAPHY
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 /* =-=-=-= 1.1 - Headings =-=-=-= */
-#evening-oak b, #newsletter b {
+#evening-oak b, #newsletter b, #products h2 {
 	font-size: 1.5rem;
 }
 h2 {
@@ -405,10 +400,6 @@ h2 {
 }
 #about h2 {
 	margin-top: 30px;
-}
-#products h2 {
-	font-size: 1.5rem;
-	margin-bottom: 0;
 }
 #newsletter p {
 	margin: 0 0 20px 0;
@@ -427,7 +418,7 @@ h2 {
 header .thin {
 	margin-top: 0;
 }
-#products header {
+#products header, #products h2, #newsletter .col-2-3 {
 	margin-bottom: 0;
 }
 /* =-=-=-= 1.2 - Body Copy =-=-=-= */
@@ -444,10 +435,9 @@ blockquote.col-3-4 {
 	margin-bottom: 20px;
 }
 .thin {
-	font-size: .8rem;
 	font-weight: 400;
 }
-footer {
+.thin, footer {
 	font-size: 0.8rem
 }
 #products section .row>div.col-2-3 p:first-child {
@@ -468,9 +458,6 @@ input {
 }
 #newsletter input, #newsletter p {
 	display: inline-block;
-}
-#newsletter .col-2-3 {
-	margin-bottom: 0;
 }
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 2.0 - NAVIGATION MENUS
@@ -497,11 +484,8 @@ input {
 .col-1-10 {
 	width: 20%;
 }
-#products section.col-1-2 div.col-2-3:last-child, #newsletter>.col-2-3 {
-	float: left;
-}
 #about {
-	padding: 20px;
+	padding: 20px 0;
 }
 #newsletter .col-1-3, #newsletter .col-2-3, #map {
 	padding: 0;
@@ -510,7 +494,10 @@ input {
 	padding: 6px;
 }
 footer {
-	padding: 20px 0;
+	padding: 40px 0 5px 0;
+}
+footer div.f-right {
+	padding-top: 5px;
 }
 .border>div {
 	padding: 10px;
@@ -529,10 +516,9 @@ footer {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 4.0 - MEDIA
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-
 .sprite {
 	width: 33%;
-	padding: 10px 0 0 0;
+	text-align: left;
 }
 .sprite li {
 	padding: 0 3px;
